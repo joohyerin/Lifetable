@@ -638,9 +638,9 @@ Reuse `poly.upper` data frame and `poly.lower` data frame.
 
 ```{r, polygon for Graunt and Halley, fig.width = 6, fig.height = 6}
 (ghp4 <- gh4 + 
-  geom_polygon(data = poly.upper, aes(x = x, y = y), alpha = 0.3, fill = "blue"))
+  geom_polygon(data = poly.upper, aes(x = x, y = y), alpha = 0.3, fill = "red"))
 (ghp5 <- ghp4 + 
-  geom_polygon(data = poly.lower, aes(x = x, y = y), alpha = 0.3, fill = "red"))
+  geom_polygon(data = poly.lower, aes(x = x, y = y), alpha = 0.3, fill = "blue"))
 (ghp5 <- ghp5 +
   geom_point(data = data.frame(x = 84, y = halley$px[85]), aes(x = x, y = y),  colour = 3))
 ggsave("../pics/graunt_halley_poly_ggplot.png", ghp5)
